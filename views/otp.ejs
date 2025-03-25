@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to WhealthyTaps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        span.im {
+            color: black;
+        }
+
+        .ii a[href] {
+            color: #1c0779;
+        }
+
+        .header {
+            background-color: #a7e3ff;
+            color: #ffffff;
+            padding: 20px 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 30px 20px;
+            color: #333333;
+            font-size: 16px;
+        }
+
+        .otp-box {
+            font-size: 1.4em;
+            font-weight: bold;
+            background: transparent;
+            padding: 12px 20px;
+            display: inline-block;
+            margin: 15px 0;
+            color: #a7e3ff;
+            border-bottom: 2px solid #a7e3ff;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #777;
+            border-top: 1px solid #dddddd;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to WhealthyTaps</h1>
+        </div>
+        <div class="content">
+            <p>Your one-time password (OTP) is:</p>
+            <p class="otp-box">
+                <%= otp %>
+            </p>
+            <p>This code is valid for the next <span style="color: #5b9999; ">2 minutes</span>. Please enter otp to
+                complete your verification.</p>
+            <p>Thank you for choosing us!</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 WhealthyTaps | All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>

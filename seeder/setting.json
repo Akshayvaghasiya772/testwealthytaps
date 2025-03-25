@@ -1,0 +1,9 @@
+[
+  {
+    "name": "loginpass",
+    "type": 1,
+    "data": {
+      "otpPrefix": 98
+    }
+  }
+]

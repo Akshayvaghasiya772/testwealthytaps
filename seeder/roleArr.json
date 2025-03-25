@@ -1,0 +1,17 @@
+[
+    {
+        "name": "user",
+        "code": "USER",
+        "weight": 5
+    },
+    {
+        "name": "admin",
+        "code": "ADMIN",
+        "weight": 1
+    },
+    {
+        "name": "sub admin",
+        "weight": 6,
+        "code": "SUB_ADMIN"
+    }
+]

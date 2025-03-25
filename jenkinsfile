@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+    environment {
+        DEPLOYMENT_DIR = '/apps/wio/'
+    }
+    stages {
+        stage('Deploy Api Main Branch') {
+            when {
+                branch 'main'
+            }
+            steps {
+                script {
+                    def appName = 'main-api'
+                    def appDir = "${DEPLOYMENT_DIR}/prod/WIO_API"
+
+                    dir(appDir) {
+                        sh 'git pull origin main'
+                        sh 'npm install'
+                        sh "pm2 restart ${appName} || pm2 start app.js --name ${appName}"
+                    }
+                }
+            }
+        }
+        stage('Deploy Api Development Branch') {
+            when {
+                branch 'development'
+            }
+            steps {
+                script {
+                    def appName = 'dev-api'
+                    def appDir = "${DEPLOYMENT_DIR}/dev/WIO_API"
+
+                    dir(appDir) {
+                        sh 'git pull origin development'
+                        sh 'npm install'
+                        sh "pm2 restart ${appName} || pm2 start app.js --name ${appName}"
+                    }
+                }
+            }
+        }
+    }
+}
+ 

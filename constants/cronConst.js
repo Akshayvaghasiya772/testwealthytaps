@@ -1,0 +1,6 @@
+const CUTOFF_DAYS = {
+  DELETE_LOG: process.env.DELETE_OLDLOG_CUTOFF_DAYS || 30,
+  DELETE_UNUSEDFILES: process.env.DELETE_UNUSEDFILES_CUTOFF_DAYS || 30,
+};
+
+module.exports = { CUTOFF_DAYS };
