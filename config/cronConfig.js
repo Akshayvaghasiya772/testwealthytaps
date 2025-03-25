@@ -1,10 +1,10 @@
 const cron = require("node-cron");
-const {
-  deleteLog,
-  deleteUnusedFiles,
-  processAllNotifications,
-  sendLikeNotificationsToPublishers,
-} = require("../services/cronService");
+// const {
+//   deleteLog,
+//   deleteUnusedFiles,
+//   processAllNotifications,
+//   sendLikeNotificationsToPublishers,
+// } = require("../services/cronService");
 
 const scheduleCronJobs = () => {
   cron.schedule("0 0 * * *", async () => {
