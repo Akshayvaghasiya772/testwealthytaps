@@ -9,7 +9,7 @@ const {
 const scheduleCronJobs = () => {
   cron.schedule("0 0 * * *", async () => {
     logger.info("Delete Log Cron Job Started");
-    await deleteLog();
+    // await deleteLog();
     logger.info("Delete Log Cron Job Finished!!!");
   });
 
